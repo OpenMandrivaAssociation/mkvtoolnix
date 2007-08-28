@@ -64,7 +64,6 @@ EOF
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-mkvinfo.desktop << EOF
 [Desktop Entry]
-Encoding=UTF-8
 Name=Matroska Info
 Comment=Shows information of Matroska video or audio files
 Exec=mkvinfo -g
@@ -76,7 +75,6 @@ Categories=X-MandrivaLinux-Multimedia-Video;AudioVideo;Video;AudioVideoEditing;
 EOF
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-mmg.desktop << EOF
 [Desktop Entry]
-Encoding=UTF-8
 Name=Mkvmerge GUI
 Comment=Create Matroska video or audio files
 Exec=mmg
