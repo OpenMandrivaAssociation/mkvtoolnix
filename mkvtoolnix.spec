@@ -44,23 +44,6 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall
-mkdir -p %buildroot%_menudir
-cat > %buildroot/%_menudir/%name << EOF
-?package(%name): \
-command="%_bindir/mkvinfo -g" \
-needs="X11" \
-icon="matroska.png" \
-section="Multimedia/Video" \
-title="Matroska Info" \
-longtitle="Shows information of Matroska video or audio files" xdg="true"
-?package(%name): \
-command="%_bindir/mmg" \
-needs="X11" \
-icon="matroska.png" \
-section="Multimedia/Video" \
-title="Mkvmerge GUI" \
-longtitle="Create Matroska video or audio files" xdg="true"
-EOF
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-mkvinfo.desktop << EOF
 [Desktop Entry]
@@ -108,6 +91,5 @@ rm -rf $RPM_BUILD_ROOT
 %_liconsdir/matroska.png
 %_iconsdir/matroska.png
 %_miconsdir/matroska.png
-%_menudir/%name
 
 
