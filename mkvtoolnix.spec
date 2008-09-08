@@ -1,8 +1,6 @@
 %define name mkvtoolnix
-%define version 2.2.0
-%define release %mkrel 3
-#fixed2
-%{?!mkrel:%define mkrel(c:) %{-c: 0.%{-c*}.}%{!?_with_unstable:%(perl -e '$_="%{1}";m/(.\*\\D\+)?(\\d+)$/;$rel=${2}-1;re;print "$1$rel";').%{?subrel:%subrel}%{!?subrel:1}.%{?distversion:%distversion}%{?!distversion:%(echo $[%{mdkversion}/10])}}%{?_with_unstable:%{1}}%{?distsuffix:%distsuffix}%{?!distsuffix:mdk}}
+%define version 2.3.0
+%define release %mkrel 1
 
 Summary: Matroska multimedia file utils
 Name: %{name}
@@ -13,7 +11,7 @@ Source1: matroska-48.png
 Source2: matroska-32.png
 Source3: matroska-16.png
 URL: http://www.bunkus.org/videotools/mkvtoolnix/
-License: GPL
+License: GPLv2+ and LGPLv2+
 Group: Video
 BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: libvorbis-devel
@@ -25,6 +23,7 @@ BuildRequires: libbzip2-devel
 BuildRequires: libflac-devel
 BuildRequires: libpcre-devel
 BuildRequires: libexpat-devel
+BuildRequires: boost-devel
 
 %description
 These tools allow information about (mkvinfo) or extraction
