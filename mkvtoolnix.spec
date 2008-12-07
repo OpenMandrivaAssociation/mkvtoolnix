@@ -1,5 +1,5 @@
 %define name mkvtoolnix
-%define version 2.4.0
+%define version 2.4.1
 %define release %mkrel 1
 
 Summary: Matroska multimedia file utils
@@ -10,6 +10,7 @@ Source0: http://www.bunkus.org/videotools/mkvtoolnix/sources/%{name}-%{version}.
 Source1: matroska-48.png
 Source2: matroska-32.png
 Source3: matroska-16.png
+Patch: mkvtoolnix-2.4.1-fix-build.patch
 URL: http://www.bunkus.org/videotools/mkvtoolnix/
 License: GPLv2+ and LGPLv2+
 Group: Video
@@ -35,6 +36,7 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 %configure2_5x
