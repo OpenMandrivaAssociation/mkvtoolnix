@@ -1,5 +1,5 @@
 %define name mkvtoolnix
-%define version 2.4.2
+%define version 2.5.1
 %define release %mkrel 1
 
 Summary: Matroska multimedia file utils
@@ -37,6 +37,8 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 %setup -q
 
 %build
+#gw 2.5.1 doesn't build
+%define Werror_cflags %nil
 %configure2_5x
 %make
 
@@ -71,6 +73,8 @@ install -D -m 644 %SOURCE1 %buildroot%_liconsdir/matroska.png
 install -D -m 644 %SOURCE2 %buildroot%_iconsdir/matroska.png
 install -D -m 644 %SOURCE3 %buildroot%_miconsdir/matroska.png
 
+%find_lang %name
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -84,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 %clean_menus 
 %endif
 
-%files
+%files -f %name.lang
 %defattr(-,root,root)
 %doc README TODO ChangeLog* COPYING
 %_bindir/*
