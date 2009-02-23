@@ -37,8 +37,6 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 %setup -q
 
 %build
-#gw 2.5.1 doesn't build
-%define Werror_cflags %nil
 %configure2_5x
 %make
 
