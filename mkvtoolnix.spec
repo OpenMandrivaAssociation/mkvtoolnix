@@ -1,5 +1,5 @@
 %define name mkvtoolnix
-%define version 2.5.3
+%define version 2.7.0
 %define release %mkrel 1
 
 Summary: Matroska multimedia file utils
@@ -23,7 +23,7 @@ BuildRequires: libbzip2-devel
 BuildRequires: libflac-devel
 BuildRequires: libpcre-devel
 BuildRequires: libexpat-devel
-BuildRequires: boost-devel
+BuildRequires: boost-devel >= 1.32.0
 
 %description
 These tools allow information about (mkvinfo) or extraction
