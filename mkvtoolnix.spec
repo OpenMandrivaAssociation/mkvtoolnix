@@ -17,7 +17,6 @@ BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: libvorbis-devel
 BuildRequires: libmatroska-devel >= 0.8.1
 BuildRequires: wxgtku-devel >= 2.6
-BuildRequires: qt4-devel
 BuildRequires: liblzo-devel
 BuildRequires: libmagic-devel
 BuildRequires: libbzip2-devel
@@ -38,7 +37,7 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 %setup -q
 
 %build
-%configure2_5x --enable-qt
+%configure2_5x
 %make
 
 %install
