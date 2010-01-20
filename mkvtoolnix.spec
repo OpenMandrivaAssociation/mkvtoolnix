@@ -23,7 +23,7 @@ BuildRequires: libbzip2-devel
 BuildRequires: libflac-devel
 BuildRequires: libpcre-devel
 BuildRequires: libexpat-devel
-BuildRequires: boost-devel >= 1.32.0
+BuildRequires: boost-devel >= 1.34.0
 
 %description
 These tools allow information about (mkvinfo) or extraction
