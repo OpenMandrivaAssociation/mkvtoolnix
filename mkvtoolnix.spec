@@ -1,5 +1,5 @@
 %define name mkvtoolnix
-%define version 3.0.0
+%define version 3.1.0
 %define release %mkrel 1
 
 Summary: Matroska multimedia file utils
@@ -37,7 +37,7 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 %setup -q
 
 %build
-%configure2_5x
+%configure2_5x --enable-qt
 %make
 
 %install
@@ -93,6 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 %_datadir/%name
 %_datadir/applications/mandriva-*
 %_mandir/man1/*
+%lang(ja) %_mandir/ja/man1/*
 %_liconsdir/matroska.png
 %_iconsdir/matroska.png
 %_miconsdir/matroska.png
