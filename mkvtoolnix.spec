@@ -1,6 +1,6 @@
 %define name mkvtoolnix
-%define version 3.1.0
-%define release %mkrel 3
+%define version 3.2.0
+%define release %mkrel 1
 
 Summary: Matroska multimedia file utils
 Name: %{name}
@@ -94,6 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 %_datadir/applications/mandriva-*
 %_mandir/man1/*
 %lang(ja) %_mandir/ja/man1/*
+%lang(zh_CN) %_mandir/zh_CN/man1/*
 %_liconsdir/matroska.png
 %_iconsdir/matroska.png
 %_miconsdir/matroska.png
