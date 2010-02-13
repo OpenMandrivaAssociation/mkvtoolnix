@@ -16,7 +16,7 @@ Group: Video
 BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: libvorbis-devel
 BuildRequires: libmatroska-devel >= 0.8.1
-BuildRequires: wxgtku-devel >= 2.6
+BuildRequires: wxgtku-devel >= 2.8
 BuildRequires: liblzo-devel
 BuildRequires: libmagic-devel
 BuildRequires: libbzip2-devel
