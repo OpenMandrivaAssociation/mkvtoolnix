@@ -1,5 +1,5 @@
 %define name mkvtoolnix
-%define version 3.3.0
+%define version 4.1.1
 %define release %mkrel 1
 
 Summary: Matroska multimedia file utils
@@ -7,15 +7,12 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://www.bunkus.org/videotools/mkvtoolnix/sources/%{name}-%{version}.tar.bz2
-Source1: matroska-48.png
-Source2: matroska-32.png
-Source3: matroska-16.png
 URL: http://www.bunkus.org/videotools/mkvtoolnix/
 License: GPLv2+ and LGPLv2+
 Group: Video
 BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: libvorbis-devel
-BuildRequires: libmatroska-devel >= 0.8.1
+BuildRequires: libmatroska-devel >= 1.0.0
 BuildRequires: wxgtku-devel >= 2.8
 BuildRequires: liblzo-devel
 BuildRequires: libmagic-devel
@@ -43,34 +40,6 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall
-mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
-cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-mkvinfo.desktop << EOF
-[Desktop Entry]
-Name=Matroska Info
-Comment=Shows information of Matroska video or audio files
-Exec=mkvinfo -g
-Icon=matroska
-Terminal=false
-Type=Application
-StartupNotify=true
-Categories=X-MandrivaLinux-Multimedia-Video;AudioVideo;Video;AudioVideoEditing;
-EOF
-cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-mmg.desktop << EOF
-[Desktop Entry]
-Name=Mkvmerge GUI
-Comment=Create Matroska video or audio files
-Exec=mmg
-Icon=matroska
-Terminal=false
-Type=Application
-StartupNotify=true
-Categories=X-MandrivaLinux-Multimedia-Video;AudioVideo;Video;AudioVideoEditing;
-EOF
-
-install -D -m 644 %SOURCE1 %buildroot%_liconsdir/matroska.png
-install -D -m 644 %SOURCE2 %buildroot%_iconsdir/matroska.png
-install -D -m 644 %SOURCE3 %buildroot%_miconsdir/matroska.png
-
 %find_lang %name
 
 %clean
@@ -91,12 +60,13 @@ rm -rf $RPM_BUILD_ROOT
 %doc README TODO ChangeLog* COPYING
 %_bindir/*
 %_datadir/%name
-%_datadir/applications/mandriva-*
+%_datadir/applications/mkvinfo.desktop
+%_datadir/applications/mkvmergeGUI.desktop
+%_datadir/icons/hicolor/*/apps/*.*
+%_datadir/mime/packages/%name.xml
 %_mandir/man1/*
 %lang(ja) %_mandir/ja/man1/*
+%lang(nl) %_mandir/nl/man1/*
 %lang(zh_CN) %_mandir/zh_CN/man1/*
-%_liconsdir/matroska.png
-%_iconsdir/matroska.png
-%_miconsdir/matroska.png
 
 
