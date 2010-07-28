@@ -1,5 +1,5 @@
 %define name mkvtoolnix
-%define version 4.1.1
+%define version 4.2.0
 %define release %mkrel 1
 
 Summary: Matroska multimedia file utils
