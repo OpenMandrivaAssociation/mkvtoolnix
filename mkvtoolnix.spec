@@ -1,6 +1,6 @@
 %define name mkvtoolnix
 %define version 4.2.0
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: Matroska multimedia file utils
 Name: %{name}
@@ -34,12 +34,12 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 %setup -q
 
 %build
-%configure2_5x
+%configure2_5x --with-wx-config=%{_bindir}/wx-config-unicode
 %make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%makeinstall
+%makeinstall_std
 %find_lang %name
 
 %clean
@@ -68,5 +68,3 @@ rm -rf $RPM_BUILD_ROOT
 %lang(ja) %_mandir/ja/man1/*
 %lang(nl) %_mandir/nl/man1/*
 %lang(zh_CN) %_mandir/zh_CN/man1/*
-
-
