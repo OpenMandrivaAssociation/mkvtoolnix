@@ -1,6 +1,6 @@
 %define name mkvtoolnix
-%define version 4.2.0
-%define release %mkrel 3
+%define version 4.3.0
+%define release %mkrel 1
 
 Summary: Matroska multimedia file utils
 Name: %{name}
@@ -21,6 +21,7 @@ BuildRequires: libflac-devel
 BuildRequires: libpcre-devel
 BuildRequires: libexpat-devel
 BuildRequires: boost-devel >= 1.34.0
+BuildRequires: ruby
 
 %description
 These tools allow information about (mkvinfo) or extraction
@@ -35,11 +36,11 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 
 %build
 %configure2_5x --with-wx-config=%{_bindir}/wx-config-unicode
-%make
+./drake %_smp_mflags
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%makeinstall_std
+./drake install DESTDIR=%buildroot
 %find_lang %name
 
 %clean
