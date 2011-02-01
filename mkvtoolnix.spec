@@ -1,6 +1,6 @@
 %define name mkvtoolnix
-%define version 4.4.0
-%define release %mkrel 2
+%define version 4.5.0
+%define release %mkrel 1
 
 Summary: Matroska multimedia file utils
 Name: %{name}
@@ -12,7 +12,7 @@ License: GPLv2+ and LGPLv2+
 Group: Video
 BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: libvorbis-devel
-BuildRequires: libmatroska-devel >= 1.0.0
+BuildRequires: libmatroska-devel >= 1.1.0
 BuildRequires: wxgtku-devel >= 2.8
 BuildRequires: liblzo-devel
 BuildRequires: libmagic-devel
@@ -59,8 +59,8 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %name.lang
 %defattr(-,root,root)
 %doc README TODO ChangeLog* COPYING
+%doc %_datadir/doc/%name/guide
 %_bindir/*
-%_datadir/%name
 %_datadir/applications/mkvinfo.desktop
 %_datadir/applications/mkvmergeGUI.desktop
 %_datadir/icons/hicolor/*/apps/*.*
