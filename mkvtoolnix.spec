@@ -12,7 +12,7 @@ License: GPLv2+ and LGPLv2+
 Group: Video
 BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: libvorbis-devel
-BuildRequires: libmatroska-devel >= 1.1.0
+#BuildRequires: libmatroska-devel >= 1.1.0
 BuildRequires: wxgtku-devel >= 2.8
 BuildRequires: liblzo-devel
 BuildRequires: libmagic-devel
