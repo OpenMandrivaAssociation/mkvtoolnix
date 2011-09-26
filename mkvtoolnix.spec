@@ -1,5 +1,5 @@
 %define name mkvtoolnix
-%define version 4.9.1
+%define version 5.0.0
 %define release %mkrel 1
 
 Summary: Matroska multimedia file utils
@@ -12,8 +12,10 @@ License: GPLv2+ and LGPLv2+
 Group: Video
 BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: libvorbis-devel
-#BuildRequires: libmatroska-devel >= 1.1.0
+BuildRequires: libmatroska-devel >= 1.3.0
+BuildRequires: libebml-devel >= 1.2.2
 BuildRequires: wxgtku-devel >= 2.8
+BuildRequires: curl-devel
 BuildRequires: liblzo-devel
 BuildRequires: libmagic-devel
 BuildRequires: libbzip2-devel
