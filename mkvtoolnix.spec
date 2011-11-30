@@ -1,5 +1,5 @@
 %define name mkvtoolnix
-%define version 5.0.1
+%define version 5.1.0
 %define release %mkrel 1
 
 Summary: Matroska multimedia file utils
@@ -22,7 +22,8 @@ BuildRequires: libbzip2-devel
 BuildRequires: libflac-devel
 BuildRequires: libpcre-devel
 BuildRequires: libexpat-devel
-BuildRequires: boost-devel >= 1.34.0
+BuildRequires: boost-devel >= 1.46
+BuildRequires: gcc-c++ >= 4.6.0
 BuildRequires: ruby
 
 %description
@@ -47,16 +48,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-
-%if %mdkversion < 200900
-%post
-%update_menus
-%endif
-
-%if %mdkversion < 200900
-%postun
-%clean_menus 
-%endif
 
 %files -f %name.lang
 %defattr(-,root,root)
