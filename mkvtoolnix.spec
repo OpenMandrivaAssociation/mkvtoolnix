@@ -1,5 +1,5 @@
 %define name mkvtoolnix
-%define version 5.1.0
+%define version 5.2.0
 %define release %mkrel 1
 
 Summary: Matroska multimedia file utils
@@ -61,4 +61,5 @@ rm -rf $RPM_BUILD_ROOT
 %_mandir/man1/*
 %lang(ja) %_mandir/ja/man1/*
 %lang(nl) %_mandir/nl/man1/*
+%lang(uk) %_mandir/uk/man1/*
 %lang(zh_CN) %_mandir/zh_CN/man1/*
