@@ -52,7 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %name.lang
 %defattr(-,root,root)
 %doc README TODO ChangeLog* COPYING
-%doc %_datadir/doc/%name/guide
 %_bindir/*
 %_datadir/applications/mkvinfo.desktop
 %_datadir/applications/mkvmergeGUI.desktop
