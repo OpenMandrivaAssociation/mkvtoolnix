@@ -17,7 +17,7 @@ BuildRequires: libebml-devel >= 1.2.2
 BuildRequires: wxgtku-devel >= 2.8
 BuildRequires: curl-devel
 BuildRequires: liblzo-devel
-BuildRequires: libmagic-devel
+BuildRequires: magic-devel
 BuildRequires: libbzip2-devel
 BuildRequires: libflac-devel
 BuildRequires: libpcre-devel
