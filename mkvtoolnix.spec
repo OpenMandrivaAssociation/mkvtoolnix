@@ -23,7 +23,7 @@ BuildRequires: libflac-devel
 BuildRequires: libpcre-devel
 BuildRequires: libexpat-devel
 BuildRequires: boost-devel >= 1.46
-BuildRequires: gcc-c++ >= 4.6.0
+BuildRequires: gcc-c++ >= 4.7
 BuildRequires: ruby
 
 %description
