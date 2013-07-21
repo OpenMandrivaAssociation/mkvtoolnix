@@ -1,6 +1,6 @@
 Summary:	Matroska multimedia file utils
 Name:		mkvtoolnix
-Version:	6.1.0
+Version:	6.2.0
 Release:	1
 Source0:	http://www.bunkus.org/videotools/mkvtoolnix/sources/%{name}-%{version}.tar.xz
 URL:		http://www.bunkus.org/videotools/mkvtoolnix/
@@ -57,4 +57,5 @@ export CXXFLAGS=`echo $CXXFLAGS | %__sed s/-gdwarf-4//`
 %lang(nl) %{_mandir}/nl/man1/*
 %lang(uk) %{_mandir}/uk/man1/*
 %lang(zh_CN) %{_mandir}/zh_CN/man1/*
+
 
