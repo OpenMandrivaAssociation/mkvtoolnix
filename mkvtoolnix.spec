@@ -2,24 +2,25 @@ Summary:	Matroska multimedia file utils
 Name:		mkvtoolnix
 Version:	6.2.0
 Release:	1
-Source0:	http://www.bunkus.org/videotools/mkvtoolnix/sources/%{name}-%{version}.tar.xz
-URL:		http://www.bunkus.org/videotools/mkvtoolnix/
 License:	GPLv2+ and LGPLv2+
 Group:		Video
-BuildRequires:	pkgconfig(vorbis)
-BuildRequires:	libmatroska-devel >= 1.4.0
-BuildRequires:	libebml-devel >= 1.3.0
-BuildRequires:	wxgtku-devel
-BuildRequires:	pkgconfig(libcurl)
-BuildRequires:	liblzo-devel
-BuildRequires:	magic-devel
-BuildRequires:	bzip2-devel
-BuildRequires:	pkgconfig(flac)
-BuildRequires:	pkgconfig(libpcre)
-BuildRequires:	pkgconfig(expat)
-BuildRequires:	boost-devel >= 1.46
+Url:		http://www.bunkus.org/videotools/mkvtoolnix/
+Source0:	http://www.bunkus.org/videotools/mkvtoolnix/sources/%{name}-%{version}.tar.xz
+
 BuildRequires:	gcc-c++ >= 4.6.0
 BuildRequires:	ruby
+BuildRequires:	boost-devel >= 1.46
+BuildRequires:	bzip2-devel
+BuildRequires:	libebml-devel >= 1.3.0
+BuildRequires:	liblzo-devel
+BuildRequires:	libmatroska-devel >= 1.4.0
+BuildRequires:	magic-devel
+BuildRequires:	wxgtku-devel
+BuildRequires:	pkgconfig(expat)
+BuildRequires:	pkgconfig(flac)
+BuildRequires:	pkgconfig(libpcre)
+BuildRequires:	pkgconfig(libcurl)
+BuildRequires:	pkgconfig(vorbis)
 
 %description
 These tools allow information about (mkvinfo) or extraction
@@ -57,5 +58,4 @@ export CXXFLAGS=`echo $CXXFLAGS | %__sed s/-gdwarf-4//`
 %lang(nl) %{_mandir}/nl/man1/*
 %lang(uk) %{_mandir}/uk/man1/*
 %lang(zh_CN) %{_mandir}/zh_CN/man1/*
-
 
