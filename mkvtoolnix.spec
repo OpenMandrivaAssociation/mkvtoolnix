@@ -1,7 +1,7 @@
 Summary:	Matroska multimedia file utils
 Name:		mkvtoolnix
 Version:	6.2.0
-Release:	1
+Release:	2
 License:	GPLv2+ and LGPLv2+
 Group:		Video
 Url:		http://www.bunkus.org/videotools/mkvtoolnix/
