@@ -1,6 +1,7 @@
 Summary:	Matroska multimedia file utils
+
 Name:		mkvtoolnix
-Version:	6.7.0
+Version:	6.8.0
 Release:	1
 Url:		http://www.bunkus.org/videotools/mkvtoolnix/
 Source0:	http://www.bunkus.org/videotools/mkvtoolnix/sources/%{name}-%{version}.tar.xz
@@ -59,5 +60,6 @@ export CXXFLAGS=`echo $CXXFLAGS | sed s/-gdwarf-4//`
 %install
 ./drake install DESTDIR=%{buildroot}
 %find_lang %{name}
+
 
 
