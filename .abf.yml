@@ -2,5 +2,6 @@ removed_sources:
   mkvtoolnix-6.4.1.tar.xz: b301d1a7dc184bbadc08762e88129a4acfde4edc
   mkvtoolnix-6.5.0.tar.xz: 2ed4501968f7eeb5ad22f04a03c18af8547188fe
   mkvtoolnix-6.7.0.tar.xz: 3322fdcc5be3f6b799703380584ab3565c576c9e
-sources:
   mkvtoolnix-6.8.0.tar.xz: d742eb0c38de48d0f12363252115c0d966e8abc3
+sources:
+  mkvtoolnix-6.9.1.tar.xz: 6c62d91663fd382b0b66da6548eea5a5c37f8128
