@@ -20,6 +20,7 @@ BuildRequires:	pkgconfig(libpcre)
 BuildRequires:	pkgconfig(vorbis)
 BuildRequires:	boost-devel >= 1.46
 BuildRequires:	ruby
+BBuildRequires:  rubygems
 
 %description
 These tools allow information about (mkvinfo) or extraction
