@@ -9,7 +9,7 @@ License:	GPLv2+ and LGPLv2+
 Group:		Video
 BuildRequires:	bzip2-devel
 BuildRequires:	libebml-devel >= 1.3.0
-BuildRequires:	lzo-devel
+BuildRequires:	liblzo-devel
 BuildRequires:	libmatroska-devel >= 1.4.1
 BuildRequires:	magic-devel
 BuildRequires:	wxgtku-devel
