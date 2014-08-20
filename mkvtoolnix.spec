@@ -36,7 +36,6 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 %{_datadir}/applications/mkvinfo.desktop
 %{_datadir}/applications/mkvmergeGUI.desktop
 %{_datadir}/icons/hicolor/*/apps/*.*
-%{_datadir}/mime/packages/%{name}.xml
 %{_mandir}/man1/*
 %lang(ja) %{_mandir}/ja/man1/*
 %lang(de) %{_mandir}/de/man1/*
@@ -55,7 +54,7 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 %setup_compile_flags
 export CXXFLAGS=`echo $CXXFLAGS | sed s/-gdwarf-4//`
 
-%configure2_5x --with-wx-config=%{_bindir}/wx-config-unicode
+%configure --with-wx-config=%{_bindir}/wx-config-unicode
 ./drake %{_smp_mflags}
 
 %install
