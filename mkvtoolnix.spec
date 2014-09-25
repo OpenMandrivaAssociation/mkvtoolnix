@@ -33,9 +33,9 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 %files -f %{name}.lang
 %doc  TODO ChangeLog* COPYING
 %{_bindir}/*
-%{_datadir}/applications/mkvinfo.desktop
-%{_datadir}/applications/mkvmergeGUI.desktop
-%{_datadir}/icons/hicolor/*/apps/*.*
+# %{_datadir}/applications/mkvinfo.desktop
+# %{_datadir}/applications/mkvmergeGUI.desktop
+# %{_datadir}/icons/hicolor/*/apps/*.*
 %{_mandir}/man1/*
 %lang(ja) %{_mandir}/ja/man1/*
 %lang(de) %{_mandir}/de/man1/*
