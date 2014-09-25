@@ -31,7 +31,7 @@ can find more information about it and its underlying technology, the
 Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 
 %files -f %{name}.lang
-%doc README TODO ChangeLog* COPYING
+%doc  TODO ChangeLog* COPYING
 %{_bindir}/*
 %{_datadir}/applications/mkvinfo.desktop
 %{_datadir}/applications/mkvmergeGUI.desktop
