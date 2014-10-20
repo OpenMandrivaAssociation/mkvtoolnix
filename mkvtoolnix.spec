@@ -1,8 +1,11 @@
+# needed or qt5 test program wont compile
+%define Werror_cflags %nil
+
 Summary:	Matroska multimedia file utils
 
 Name:		mkvtoolnix
 Version:	7.2.0
-Release:	2
+Release:	3
 Url:		http://www.bunkus.org/videotools/mkvtoolnix/
 Source0:	http://www.bunkus.org/videotools/mkvtoolnix/sources/%{name}-%{version}.tar.xz
 License:	GPLv2+ and LGPLv2+
@@ -12,7 +15,7 @@ BuildRequires:	libebml-devel >= 1.3.0
 BuildRequires:	lzo-devel
 BuildRequires:	libmatroska-devel >= 1.4.1
 BuildRequires:	magic-devel
-BuildRequires:	wxgtku-devel
+BuildRequires:	qt5-devel
 BuildRequires:	pkgconfig(expat)
 BuildRequires:	pkgconfig(flac)
 BuildRequires:	pkgconfig(libcurl)
@@ -53,8 +56,9 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 # otherwise configure won't find lambda functions support
 %setup_compile_flags
 export CXXFLAGS=`echo $CXXFLAGS | sed s/-gdwarf-4//`
-
-%configure --with-wx-config=%{_bindir}/wx-config-unicode
+%configure \
+	--enable-qt \
+	--disable-wxwidgets
 ./drake %{_smp_mflags}
 
 %install
