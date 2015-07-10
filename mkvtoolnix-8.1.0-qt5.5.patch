@@ -1,0 +1,10 @@
+--- mkvtoolnix-8.1.0/src/mkvtoolnix-gui/util/files_drag_drop_handler.h.orig	2015-07-10 20:42:01.102563134 +0100
++++ mkvtoolnix-8.1.0/src/mkvtoolnix-gui/util/files_drag_drop_handler.h	2015-07-10 20:42:09.745563782 +0100
+@@ -4,6 +4,7 @@
+ #include "common/common_pch.h"
+ 
+ #include <QStringList>
++#include <QObject>
+ 
+ class QDropEvent;
+ 

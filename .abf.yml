@@ -1,4 +1,5 @@
 removed_sources:
   mkvtoolnix-7.8.0.tar.xz: e855680e5b673e1d39e2f4146ce809504c435f7b
-sources:
   mkvtoolnix-7.9.0.tar.xz: b42e458fa95a24cd1d774777a2e29f2216d22f45
+sources:
+  mkvtoolnix-8.1.0.tar.xz: 77d4090671281f68b8df9efac079246bfb918fcc
