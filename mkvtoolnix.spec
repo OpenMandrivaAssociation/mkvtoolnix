@@ -5,7 +5,7 @@ Summary:	Matroska multimedia file utils
 
 Name:		mkvtoolnix
 Version:	8.1.0
-Release:	1
+Release:	2
 Url:		http://www.bunkus.org/videotools/mkvtoolnix/
 Source0:	http://www.bunkus.org/videotools/mkvtoolnix/sources/%{name}-%{version}.tar.xz
 Patch1:		mkvtoolnix-8.1.0-qt5.5.patch
