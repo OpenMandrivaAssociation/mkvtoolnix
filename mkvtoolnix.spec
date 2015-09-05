@@ -4,11 +4,10 @@
 Summary:	Matroska multimedia file utils
 
 Name:		mkvtoolnix
-Version:	8.1.0
+Version:	8.3.0
 Release:	1
 Url:		http://www.bunkus.org/videotools/mkvtoolnix/
 Source0:	http://www.bunkus.org/videotools/mkvtoolnix/sources/%{name}-%{version}.tar.xz
-Patch1:		mkvtoolnix-8.1.0-qt5.5.patch
 License:	GPLv2+ and LGPLv2+
 Group:		Video
 BuildRequires:	bzip2-devel
@@ -44,6 +43,7 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 %{_mandir}/man1/*
 %lang(ja) %{_mandir}/ja/man1/*
 %lang(de) %{_mandir}/de/man1/*
+%lang(es) %{_mandir}/es/man1/*
 %lang(nl) %{_mandir}/nl/man1/*
 %lang(uk) %{_mandir}/uk/man1/*
 %lang(zh_CN) %{_mandir}/zh_CN/man1/*
