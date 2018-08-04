@@ -4,8 +4,8 @@
 Summary:	Matroska multimedia file utils
 
 Name:		mkvtoolnix
-Version:	8.9.0
-Release:	2
+Version:	25.0.0
+Release:	1
 Url:		http://www.bunkus.org/videotools/mkvtoolnix/
 Source0:	http://www.bunkus.org/videotools/mkvtoolnix/sources/%{name}-%{version}.tar.xz
 License:	GPLv2+ and LGPLv2+
@@ -25,6 +25,13 @@ BuildRequires:	pkgconfig(vorbis)
 BuildRequires:	boost-devel >= 1.46
 BuildRequires:	ruby
 BuildRequires:  rubygems
+BuildRequires:	ruby-rake
+# Upstream need it both for man-page (penguin).
+BuildRequires:	docbook-style-xsl
+BuildRequires:	xsltproc
+# Optional - for building the translated man pages (penguin).
+BuildRequires: po4a
+BuildRequires: pkgconfig(libcmark)
 
 %description
 These tools allow information about (mkvinfo) or extraction
