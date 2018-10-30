@@ -25,6 +25,7 @@ BuildRequires:	pkgconfig(vorbis)
 BuildRequires:	boost-devel >= 1.46
 BuildRequires:	ruby
 BuildRequires:  rubygems
+BuildRequires:	rubygem-rake
 #BuildRequires:	ruby-rake
 # Upstream need it both for man-page (penguin).
 BuildRequires:	docbook-style-xsl
