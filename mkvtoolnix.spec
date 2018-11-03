@@ -17,11 +17,13 @@ BuildRequires:	lzo-devel
 BuildRequires:	libmatroska-devel >= 1.4.1
 BuildRequires:	magic-devel
 BuildRequires:	qt5-devel
+BuildRequires:  pkgconfig(Qt5Multimedia)
 BuildRequires:	pkgconfig(expat)
 BuildRequires:	pkgconfig(flac)
 BuildRequires:	pkgconfig(libcurl)
 BuildRequires:	pkgconfig(libpcre)
 BuildRequires:	pkgconfig(vorbis)
+BuildRequires:	pkgconfig(appstream-glib)
 BuildRequires:	boost-devel >= 1.46
 BuildRequires:	ruby
 BuildRequires:  rubygems
@@ -75,7 +77,7 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 export CXXFLAGS=`echo $CXXFLAGS | sed s/-gdwarf-4//`
 %configure \
 	--enable-qt \
-	--disable-wxwidgets
+	
 rake %{_smp_mflags}
 
 %install
@@ -84,3 +86,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/org.bunkus.mkvtoolnix
 appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/org.bunkus.mkvtoolnix-gui.appdata.xml
 
 %find_lang %{name}
+%find_lang mkvextract --with-man
+%find_lang mkvmerge --with-man
+%find_lang mkvpropedit --with-man
+%find_lang mkvinfo --with-man
+cat mkv{extract,info,merge,propedit}.lang >> mkvtoolnix.lang
+%find_lang mkvtoolnix-gui --with-man
