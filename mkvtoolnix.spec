@@ -57,7 +57,7 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 %{_datadir}/icons/hicolor/*/apps/*.*
 #{_datadir}/mime/packages/mkvtoolnix.xml
 %{_datadir}/%{name}/sounds/finished*
-#{_mandir}/man1/*
+%{_mandir}/man1/*
 %lang(ca) %{_mandir}/ca/man1/*
 %lang(ja) %{_mandir}/ja/man1/*
 %lang(de) %{_mandir}/de/man1/*
@@ -90,9 +90,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/org.bunkus.mkvtoolnix
 appstream-util validate-relax --nonet %{buildroot}%{_datadir}/metainfo/org.bunkus.mkvtoolnix-gui.appdata.xml
 
 %find_lang %{name}
-%find_lang mkvextract --with-man
-%find_lang mkvmerge --with-man
-%find_lang mkvpropedit --with-man
-%find_lang mkvinfo --with-man
+#find_lang mkvextract --with-man
+#find_lang mkvmerge --with-man
+#find_lang mkvpropedit --with-man
+#find_lang mkvinfo --with-man
 cat mkv{extract,info,merge,propedit}.lang >> mkvtoolnix.lang
 %find_lang mkvtoolnix-gui --with-man
