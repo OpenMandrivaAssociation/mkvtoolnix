@@ -52,10 +52,12 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 %{_bindir}/*
 #{_datadir}/applications/mkvinfo.desktop
 %{_datadir}/applications/org.bunkus.mkvtoolnix-gui.desktop
-#{_datadir}/applications/mkvtoolnix-gui.desktop
-#{_datadir}/icons/hicolor/*/apps/*.*
+%{_datadir}/metainfo/org.bunkus.mkvtoolnix-gui.appdata.xml
+%{_datadir}/mime/packages/org.bunkus.mkvtoolnix-gui.xml
+%{_datadir}/icons/hicolor/*/apps/*.*
 #{_datadir}/mime/packages/mkvtoolnix.xml
-%{_mandir}/man1/*
+%{_datadir}/%{name}/sounds/finished*
+#{_mandir}/man1/*
 %lang(ca) %{_mandir}/ca/man1/*
 %lang(ja) %{_mandir}/ja/man1/*
 %lang(de) %{_mandir}/de/man1/*
