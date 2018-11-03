@@ -44,12 +44,12 @@ can find more information about it and its underlying technology, the
 Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 
 %files -f %{name}.lang
-%doc README.md ChangeLog* COPYING NEWS
+%doc README.md COPYING
 %{_bindir}/*
-%{_datadir}/applications/mkvinfo.desktop
-%{_datadir}/applications/mkvtoolnix-gui.desktop
-%{_datadir}/icons/hicolor/*/apps/*.*
-%{_datadir}/mime/packages/mkvtoolnix.xml
+#{_datadir}/applications/mkvinfo.desktop
+#{_datadir}/applications/mkvtoolnix-gui.desktop
+#{_datadir}/icons/hicolor/*/apps/*.*
+#{_datadir}/mime/packages/mkvtoolnix.xml
 %{_mandir}/man1/*
 %lang(ca) %{_mandir}/ca/man1/*
 %lang(ja) %{_mandir}/ja/man1/*
