@@ -79,9 +79,7 @@ export CXXFLAGS=`echo $CXXFLAGS | sed s/-gdwarf-4//`
 rake %{_smp_mflags}
 
 %install
-rake DESTDIR=%{buildroot} install
-
-
+rake DESTDIR=$RPM_BUILD_ROOT TOOLS=1 install
 desktop-file-validate %{buildroot}%{_datadir}/applications/org.bunkus.mkvtoolnix-gui.desktop
 appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/org.bunkus.mkvtoolnix-gui.appdata.xml
 
