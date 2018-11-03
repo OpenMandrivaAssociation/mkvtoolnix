@@ -56,6 +56,7 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 %lang(de) %{_mandir}/de/man1/*
 %lang(es) %{_mandir}/es/man1/*
 %lang(nl) %{_mandir}/nl/man1/*
+%lang(ko) %{_mandir}/ko/man1/*
 %lang(pl) %{_mandir}/pl/man1/*
 %lang(uk) %{_mandir}/uk/man1/*
 %lang(zh_CN) %{_mandir}/zh_CN/man1/*
