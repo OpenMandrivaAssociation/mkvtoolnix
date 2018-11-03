@@ -80,8 +80,9 @@ rake %{_smp_mflags}
 
 %install
 rake DESTDIR=%{buildroot} install
-%find_lang %{name}
 
-for f in mkvtoolnix-gui; do
-  desktop-file-validate %{buildroot}%{_datadir}/applications/org.bunkus.$f.desktop
-done
+
+desktop-file-validate %{buildroot}%{_datadir}/applications/org.bunkus.mkvtoolnix-gui.desktop
+appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/org.bunkus.mkvtoolnix-gui.appdata.xml
+
+%find_lang %{name}
