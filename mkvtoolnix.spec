@@ -47,6 +47,7 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 %doc README.md COPYING
 %{_bindir}/*
 #{_datadir}/applications/mkvinfo.desktop
+%{_datadir}/applications/org.bunkus.mkvtoolnix-gui.desktop
 #{_datadir}/applications/mkvtoolnix-gui.desktop
 #{_datadir}/icons/hicolor/*/apps/*.*
 #{_datadir}/mime/packages/mkvtoolnix.xml
