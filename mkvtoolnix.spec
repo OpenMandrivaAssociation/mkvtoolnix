@@ -94,5 +94,5 @@ appstream-util validate-relax --nonet %{buildroot}%{_datadir}/metainfo/org.bunku
 #find_lang mkvmerge --with-man
 #find_lang mkvpropedit --with-man
 #find_lang mkvinfo --with-man
-cat mkv{extract,info,merge,propedit}.lang >> mkvtoolnix.lang
+#cat mkv{extract,info,merge,propedit}.lang >> mkvtoolnix.lang
 %find_lang mkvtoolnix-gui --with-man
