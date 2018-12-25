@@ -8,6 +8,7 @@ Version:	29.0.0
 Release:	1
 Url:		http://www.bunkus.org/videotools/mkvtoolnix/
 Source0:	http://www.bunkus.org/videotools/mkvtoolnix/sources/%{name}-%{version}.tar.xz
+Patch0:		build-fix-with-boost-1.69.patch
 License:	GPLv2+ and LGPLv2+
 Group:		Video
 BuildRequires:	pkgconfig(zlib)
@@ -72,7 +73,7 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 # Add workaround for bug in gcc 4.7.2_2012.07
