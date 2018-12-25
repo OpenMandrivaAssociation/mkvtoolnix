@@ -1,0 +1,39 @@
+Index: src/input/r_matroska.cpp
+===================================================================
+--- src/input/r_matroska.cpp
++++ src/input/r_matroska.cpp	2018-12-25 19:55:23.845733062 +0100
+@@ -1684,7 +1684,7 @@
+     PTZR(t->ptzr)->set_track_forced_flag(true);
+ 
+   if (boost::logic::indeterminate(PTZR(t->ptzr)->m_ti.m_enabled_track))
+-    PTZR(t->ptzr)->set_track_enabled_flag(t->enabled_track);
++    PTZR(t->ptzr)->set_track_enabled_flag(bool{t->enabled_track});
+ 
+   if ((0 != t->track_uid) && !PTZR(t->ptzr)->set_uid(t->track_uid))
+     mxwarn(fmt::format(Y("matroska_reader: Could not keep the track UID {0} because it is already allocated for the new file.\n"), t->track_uid));
+Index: src/common/debugging.h
+===================================================================
+--- src/common/debugging.h
++++ src/common/debugging.h	2018-12-25 19:54:10.383358199 +0100
+@@ -57,7 +57,7 @@
+       if (boost::logic::indeterminate(m_requested))
+         m_requested = debugging_c::requested(m_option);
+ 
+-      return m_requested;
++      return bool{m_requested};
+     }
+   };
+ 
+Index: src/output/p_avc_es.cpp
+===================================================================
+--- src/output/p_avc_es.cpp
++++ src/output/p_avc_es.cpp	2018-12-25 19:56:45.913266595 +0100
+@@ -46,7 +46,7 @@
+   set_codec_id(MKV_V_MPEG4_AVC);
+ 
+   m_parser.set_keep_ar_info(false);
+-  m_parser.set_fix_bitstream_frame_rate(m_ti.m_fix_bitstream_frame_rate);
++  m_parser.set_fix_bitstream_frame_rate(bool{m_ti.m_fix_bitstream_frame_rate});
+ 
+   // If no external timestamp file has been specified then mkvmerge
+   // might have created a factory due to the --default-duration
