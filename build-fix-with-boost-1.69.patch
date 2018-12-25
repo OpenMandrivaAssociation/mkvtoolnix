@@ -1,21 +1,3 @@
-After https://github.com/boostorg/logic/commit/23cd89d4c80f build fails:
-
-src/common/debugging.h:63:14: fatal error: no viable conversion from returned value of type 'boost::tribool' to function return type 'bool'
-      return m_requested;
-             ^~~~~~~~~~~
-src/input/r_matroska.cpp:1685:43: fatal error: no viable conversion from 'boost::logic::tribool' to 'bool'
-    PTZR(t->ptzr)->set_track_enabled_flag(t->enabled_track);
-                                          ^~~~~~~~~~~~~~~~
-src/merge/generic_packetizer.h:199:44: note: passing argument to parameter 'enabled_track' here
-  virtual void set_track_enabled_flag(bool enabled_track);
-                                           ^
-src/output/p_avc_es.cpp:49:41: fatal error: no viable conversion from 'boost::logic::tribool' to 'bool'
-  m_parser.set_fix_bitstream_frame_rate(m_ti.m_fix_bitstream_frame_rate);
-                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-src/common/avc_es_parser.h:152:42: note: passing argument to parameter 'fix' here
-  void set_fix_bitstream_frame_rate(bool fix) {
-                                         ^
-
 --- src/common/debugging.h.orig	2018-10-20 14:44:02 UTC
 +++ src/common/debugging.h
 @@ -60,7 +60,7 @@ class debugging_option_c {
