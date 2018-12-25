@@ -8,6 +8,8 @@ Version:	29.0.0
 Release:	1
 Url:		http://www.bunkus.org/videotools/mkvtoolnix/
 Source0:	http://www.bunkus.org/videotools/mkvtoolnix/sources/%{name}-%{version}.tar.xz
+# Fail to build with boost-1.69. Import and revork FreeBSD patch. (penguin)
+# https://svnweb.freebsd.org/ports/head/multimedia/mkvtoolnix/files/patch-boost-1.69?view=markup&pathrev=482787
 Patch0:		fix-build-with-boost.patch
 License:	GPLv2+ and LGPLv2+
 Group:		Video
