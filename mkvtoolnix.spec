@@ -4,13 +4,13 @@
 Summary:	Matroska multimedia file utils
 
 Name:		mkvtoolnix
-Version:	29.0.0
+Version:	31.0.0
 Release:	1
 Url:		http://www.bunkus.org/videotools/mkvtoolnix/
 Source0:	http://www.bunkus.org/videotools/mkvtoolnix/sources/%{name}-%{version}.tar.xz
-# Fail to build with boost-1.69. Import and revork FreeBSD patch. (penguin)
+# 29.0.0 fail to build with boost-1.69. Import and revork FreeBSD patch. (penguin)
 # https://svnweb.freebsd.org/ports/head/multimedia/mkvtoolnix/files/patch-boost-1.69?view=markup&pathrev=482787
-Patch0:		fix-build-with-boost.patch
+#Patch0:		fix-build-with-boost.patch
 License:	GPLv2+ and LGPLv2+
 Group:		Video
 BuildRequires:	pkgconfig(zlib)
@@ -75,7 +75,7 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 
 %prep
 %setup -q
-%autopatch -p0
+#autopatch -p0
 
 %build
 # Add workaround for bug in gcc 4.7.2_2012.07
