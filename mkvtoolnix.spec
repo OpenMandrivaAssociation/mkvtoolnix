@@ -5,7 +5,7 @@ Summary:	Matroska multimedia file utils
 
 Name:		mkvtoolnix
 Version:	32.0.0
-Release:	1
+Release:	2
 Url:		http://www.bunkus.org/videotools/mkvtoolnix/
 Source0:	http://www.bunkus.org/videotools/mkvtoolnix/sources/%{name}-%{version}.tar.xz
 # 29.0.0 fail to build with boost-1.69. Import and revork FreeBSD patch. (penguin)
@@ -14,11 +14,11 @@ Source0:	http://www.bunkus.org/videotools/mkvtoolnix/sources/%{name}-%{version}.
 License:	GPLv2+ and LGPLv2+
 Group:		Video
 BuildRequires:	pkgconfig(zlib)
-BuildRequires: desktop-file-utils
+BuildRequires:	desktop-file-utils
 BuildRequires:	bzip2-devel
-BuildRequires:	libebml-devel >= 1.3.0
+BuildRequires:	pkgconfig(libebml) >= 1.3.7
 BuildRequires:	lzo-devel
-BuildRequires:	libmatroska-devel >= 1.4.1
+BuildRequires:	pkgconfig(libmatroska) >= 1.5.0
 BuildRequires:	magic-devel
 BuildRequires:	qt5-devel
 BuildRequires:  pkgconfig(Qt5Multimedia)
