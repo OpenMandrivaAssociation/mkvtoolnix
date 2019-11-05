@@ -4,7 +4,7 @@
 Summary:	Matroska multimedia file utils
 
 Name:		mkvtoolnix
-Version:	38.0.0
+Version:	39.0.0
 Release:	1
 Url:		http://www.bunkus.org/videotools/mkvtoolnix/
 Source0:	http://www.bunkus.org/videotools/mkvtoolnix/sources/%{name}-%{version}.tar.xz
@@ -61,6 +61,7 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 #{_datadir}/mime/packages/mkvtoolnix.xml
 %{_datadir}/%{name}/sounds/finished*
 %{_mandir}/man1/*
+%{_mandir}/bg/man1/*
 %lang(ca) %{_mandir}/ca/man1/*
 %lang(ja) %{_mandir}/ja/man1/*
 %lang(de) %{_mandir}/de/man1/*
