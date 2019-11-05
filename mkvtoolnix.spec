@@ -61,6 +61,7 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 #{_datadir}/mime/packages/mkvtoolnix.xml
 %{_datadir}/%{name}/sounds/finished*
 %{_mandir}/man1/*
+%{_mandir}/bg/man1/*
 %lang(ca) %{_mandir}/ca/man1/*
 %lang(ja) %{_mandir}/ja/man1/*
 %lang(de) %{_mandir}/de/man1/*
