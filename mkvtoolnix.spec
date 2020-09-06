@@ -23,10 +23,12 @@ BuildRequires:	magic-devel
 BuildRequires:	qt5-devel
 BuildRequires:  pkgconfig(Qt5Multimedia)
 BuildRequires:	pkgconfig(expat)
+BuildRequires:  pkgconfig(fmt)
 BuildRequires:	pkgconfig(flac)
 BuildRequires:	pkgconfig(libcurl)
 BuildRequires:	pkgconfig(libpcre)
 BuildRequires:	pkgconfig(vorbis)
+BuildRequires:  pkgconfig(libpcre2-posix)
 BuildRequires:	pkgconfig(appstream-glib)
 BuildRequires:	appstream-util
 BuildRequires:	boost-devel >= 1.46
