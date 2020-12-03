@@ -5,7 +5,7 @@ Summary:	Matroska multimedia file utils
 
 Name:		mkvtoolnix
 Version:	51.0.0
-Release:	1
+Release:	2
 Url:		http://www.bunkus.org/videotools/mkvtoolnix/
 Source0:	http://www.bunkus.org/videotools/mkvtoolnix/sources/%{name}-%{version}.tar.xz
 # 29.0.0 fail to build with boost-1.69. Import and revork FreeBSD patch. (penguin)
