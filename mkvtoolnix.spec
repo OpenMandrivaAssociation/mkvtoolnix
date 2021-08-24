@@ -30,6 +30,7 @@ BuildRequires:	pkgconfig(libpcre)
 BuildRequires:	pkgconfig(vorbis)
 BuildRequires:  pkgconfig(libpcre2-posix)
 BuildRequires:	pkgconfig(appstream-glib)
+BuildRequires:	pkgconfig(gmp)
 BuildRequires:	appstream-util
 BuildRequires:	boost-devel >= 1.46
 BuildRequires:	ruby
