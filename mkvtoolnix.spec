@@ -4,7 +4,7 @@
 Summary:	Matroska multimedia file utils
 
 Name:		mkvtoolnix
-Version:	60.0.0
+Version:	61.0.0
 Release:	1
 Url:		http://www.bunkus.org/videotools/mkvtoolnix/
 Source0:	http://www.bunkus.org/videotools/mkvtoolnix/sources/%{name}-%{version}.tar.xz
