@@ -1,3 +1,4 @@
+%define _empty_manifest_terminate_build 0
 # needed or qt5 test program wont compile
 %define Werror_cflags %nil
 
