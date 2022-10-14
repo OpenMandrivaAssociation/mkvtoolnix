@@ -5,8 +5,8 @@
 Summary:	Matroska multimedia file utils
 
 Name:		mkvtoolnix
-Version:	70.0.0
-Release:	2
+Version:	71.1.0
+Release:	1
 Url:		http://mkvtoolnix.download/
 Source0:	https://mkvtoolnix.download/sources/%{name}-%{version}.tar.xz
 # 29.0.0 fail to build with boost-1.69. Import and revork FreeBSD patch. (penguin)
