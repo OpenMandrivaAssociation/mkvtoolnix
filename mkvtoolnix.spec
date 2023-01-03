@@ -12,6 +12,8 @@ Source0:	https://mkvtoolnix.download/sources/%{name}-%{version}.tar.xz
 # 29.0.0 fail to build with boost-1.69. Import and revork FreeBSD patch. (penguin)
 # https://svnweb.freebsd.org/ports/head/multimedia/mkvtoolnix/files/patch-boost-1.69?view=markup&pathrev=482787
 #Patch0:		fix-build-with-boost.patch
+# Fix compilation with Ruby 3.2.0
+Patch1:		https://gitlab.com/mbunkus/mkvtoolnix/-/commit/ab6455f68c597ede3d6959597a38f2ecbc198011.patch
 License:	GPLv2+ and LGPLv2+
 Group:		Video
 BuildRequires:	pkgconfig(zlib)
@@ -83,8 +85,7 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
-#autopatch -p0
+%autosetup -p1
 
 %build
 # Add workaround for bug in gcc 4.7.2_2012.07
