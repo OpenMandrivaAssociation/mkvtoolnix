@@ -5,15 +5,13 @@
 Summary:	Matroska multimedia file utils
 
 Name:		mkvtoolnix
-Version:	73.0.0
+Version:	74.0.0
 Release:	1
 Url:		http://mkvtoolnix.download/
 Source0:	https://mkvtoolnix.download/sources/%{name}-%{version}.tar.xz
 # 29.0.0 fail to build with boost-1.69. Import and revork FreeBSD patch. (penguin)
 # https://svnweb.freebsd.org/ports/head/multimedia/mkvtoolnix/files/patch-boost-1.69?view=markup&pathrev=482787
 #Patch0:		fix-build-with-boost.patch
-# Fix compilation with Ruby 3.2.0
-Patch1:		https://gitlab.com/mbunkus/mkvtoolnix/-/commit/ab6455f68c597ede3d6959597a38f2ecbc198011.patch
 License:	GPLv2+ and LGPLv2+
 Group:		Video
 BuildRequires:	pkgconfig(zlib)
