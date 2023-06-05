@@ -5,7 +5,7 @@
 Summary:	Matroska multimedia file utils
 
 Name:		mkvtoolnix
-Version:	76.0
+Version:	77.0
 Release:	1
 Url:		http://mkvtoolnix.download/
 Source0:	https://mkvtoolnix.download/sources/%{name}-%{version}.tar.xz
