@@ -21,8 +21,15 @@ BuildRequires:	pkgconfig(libebml) >= 1.3.7
 BuildRequires:	lzo-devel
 BuildRequires:	pkgconfig(libmatroska) >= 1.5.0
 BuildRequires:	magic-devel
-BuildRequires:	qt5-devel
-BuildRequires:  pkgconfig(Qt5Multimedia)
+BuildRequires:	qmake-qt6
+BuildRequires:	cmake(Qt6Concurrent)
+BuildRequires:	cmake(Qt6Core)
+BuildRequires:	cmake(Qt6DBus)
+BuildRequires:	cmake(Qt6Gui)
+BuildRequires:	cmake(Qt6Multimedia)
+BuildRequires:	cmake(Qt6Network)
+BuildRequires:	cmake(Qt6Svg)
+BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	pkgconfig(expat)
 BuildRequires:  pkgconfig(fmt)
 BuildRequires:	pkgconfig(flac)
@@ -92,7 +99,7 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 %setup_compile_flags
 export CXXFLAGS=`echo $CXXFLAGS | sed s/-gdwarf-4//`
 %configure \
-	--enable-qt \
+	--enable-qt6 \
 	
 rake %{_smp_mflags}
 
