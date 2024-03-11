@@ -61,7 +61,7 @@ format aiming to become THE new container format for the future. You
 can find more information about it and its underlying technology, the
 Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 
-%files -f %{name}.lang
+%files -f %{name}.lang -f %{name}-gui.lang
 %doc README.md COPYING
 %{_bindir}/*
 #{_datadir}/applications/mkvinfo.desktop
