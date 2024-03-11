@@ -5,7 +5,7 @@
 Summary:	Matroska multimedia file utils
 
 Name:		mkvtoolnix
-Version:	82.0
+Version:	83.0
 Release:	1
 Url:		http://mkvtoolnix.download/
 Source0:	https://mkvtoolnix.download/sources/%{name}-%{version}.tar.xz
@@ -109,9 +109,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/org.bunkus.mkvtoolnix
 #appstream-util validate-relax --nonet %{buildroot}%{_datadir}/metainfo/org.bunkus.mkvtoolnix-gui.appdata.xml
 
 %find_lang %{name}
-#find_lang mkvextract --with-man
-#find_lang mkvmerge --with-man
-#find_lang mkvpropedit --with-man
-#find_lang mkvinfo --with-man
-#cat mkv{extract,info,merge,propedit}.lang >> mkvtoolnix.lang
+%find_lang mkvextract --with-man
+%find_lang mkvmerge --with-man
+%find_lang mkvpropedit --with-man
+%find_lang mkvinfo --with-man
+cat mkv{extract,info,merge,propedit}.lang >> mkvtoolnix.lang
 %find_lang mkvtoolnix-gui --with-man
