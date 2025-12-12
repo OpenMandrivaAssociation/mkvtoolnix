@@ -14,6 +14,9 @@ Source0:	https://mkvtoolnix.download/sources/%{name}-%{version}.tar.xz
 #Patch0:		fix-build-with-boost.patch
 License:	GPLv2+ and LGPLv2+
 Group:		Video
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	desktop-file-utils
 BuildRequires:	bzip2-devel
@@ -50,8 +53,8 @@ BuildRequires:  rubygems
 BuildRequires:	docbook-style-xsl
 BuildRequires:	xsltproc
 # Optional - for building the translated man pages (penguin).
-BuildRequires: po4a
-BuildRequires: pkgconfig(libcmark)
+BuildRequires:	po4a
+BuildRequires:	pkgconfig(libcmark)
 
 %description
 These tools allow information about (mkvinfo) or extraction
