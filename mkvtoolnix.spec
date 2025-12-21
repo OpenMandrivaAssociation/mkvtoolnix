@@ -14,6 +14,7 @@ Source0:	https://mkvtoolnix.download/sources/%{name}-%{version}.tar.xz
 #Patch0:		fix-build-with-boost.patch
 License:	GPLv2+ and LGPLv2+
 Group:		Video
+BuildRequires:	slibtool
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool-base
