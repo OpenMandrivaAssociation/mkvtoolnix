@@ -5,8 +5,8 @@
 Summary:	Matroska multimedia file utils
 
 Name:		mkvtoolnix
-Version:	100.0
-Release:	2
+Version:	101.0
+Release:	1
 Url:		https://mkvtoolnix.download/
 Source0:	https://mkvtoolnix.download/sources/%{name}-%{version}.tar.xz
 # 29.0.0 fail to build with boost-1.69. Import and revork FreeBSD patch. (penguin)
@@ -17,13 +17,12 @@ Group:		Video
 BuildRequires:	slibtool
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool-base
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	desktop-file-utils
 BuildRequires:	bzip2-devel
-BuildRequires:	pkgconfig(libebml) >= 1.3.7
+BuildRequires:	pkgconfig(libebml) >= 1.4.7
 BuildRequires:	lzo-devel
-BuildRequires:	pkgconfig(libmatroska) >= 1.5.0
+BuildRequires:	pkgconfig(libmatroska) >= 1.7.2
 BuildRequires:	magic-devel
 BuildRequires:	qmake-qt6
 BuildRequires:	cmake(Qt6Concurrent)
@@ -44,7 +43,7 @@ BuildRequires:  pkgconfig(libpcre2-posix)
 BuildRequires:	pkgconfig(appstream-glib)
 BuildRequires:	pkgconfig(gmp)
 BuildRequires:	appstream-util
-BuildRequires:	boost-devel >= 1.46
+BuildRequires:	boost-devel >= 1.74
 BuildRequires:	ruby
 BuildRequires:  rubygems
 #BuildRequires:	rubygem-rake
@@ -70,7 +69,7 @@ Extensible Binary Meta Language (EBML), at http://www.matroska.org/
 %{_bindir}/*
 #{_datadir}/applications/mkvinfo.desktop
 %{_datadir}/applications/org.bunkus.mkvtoolnix-gui.desktop
-%{_datadir}/metainfo/org.bunkus.mkvtoolnix-gui.appdata.xml
+%{_datadir}/metainfo/org.bunkus.mkvtoolnix-gui.metainfo.xml
 %{_datadir}/mime/packages/org.bunkus.mkvtoolnix-gui.xml
 %{_datadir}/mkvtoolnix/qt_resources.rcc
 %{_datadir}/icons/hicolor/*/apps/*.*
@@ -96,7 +95,7 @@ rake %{_smp_mflags}
 %install
 rake DESTDIR=$RPM_BUILD_ROOT TOOLS=1 install
 desktop-file-validate %{buildroot}%{_datadir}/applications/org.bunkus.mkvtoolnix-gui.desktop
-#appstream-util validate-relax --nonet %{buildroot}%{_datadir}/metainfo/org.bunkus.mkvtoolnix-gui.appdata.xml
+#appstream-util validate-relax --nonet %{buildroot}%{_datadir}/metainfo/org.bunkus.mkvtoolnix-gui.metainfo.xml
 
 %find_lang %{name}
 %find_lang mkvextract --with-man
